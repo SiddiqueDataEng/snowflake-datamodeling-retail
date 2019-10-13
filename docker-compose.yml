@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: dm_demo_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD:-retailpw}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-retail}
+      MYSQL_USER: ${MYSQL_USER:-retail}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-retailpw}
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d
+volumes:
+  mysql_data:
+

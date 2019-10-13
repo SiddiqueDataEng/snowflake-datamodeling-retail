@@ -1,0 +1,10 @@
+streamlit
+snowflake-connector-python
+snowflake-sqlalchemy
+python-dotenv
+pandas
+faker
+pyarrow
+sqlalchemy
+PyMySQL
+fastavro
