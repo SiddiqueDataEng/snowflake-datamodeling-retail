@@ -14,7 +14,12 @@ This enhanced version of `github_push.py` provides advanced commit history gener
 - **File-Based Commits**: Commits are organized around actual project files and directories
 - **Realistic Progression**: Commits follow a logical development progression
 
-### 3. **Enhanced Configuration**
+### 3. **Realistic Commit Messages**
+- **Contextual Messages**: Commit messages that match actual GitHub patterns with contributor names and timestamps
+- **Contributor Specialization**: Different contributors assigned based on commit type (deployment, API, testing, etc.)
+- **Timestamp Integration**: Realistic timestamps in ISO format matching GitHub's display pattern
+
+### 4. **Enhanced Configuration**
 - **Environment File Support**: Load configuration from `github.env` file
 - **Flexible Date Ranges**: Support for any date range with validation
 - **Customizable Parameters**: Weekend ratio, commit count, and more
@@ -107,17 +112,27 @@ python github_push.py --exclude "*.log" "temp/*" ".env"
   - Weekends: 12 PM - 10 PM
 - **Randomization**: Each commit gets unique timestamp within realistic bounds
 
-### Commit Message Categories
-The script generates commits with realistic messages in these categories:
+### Realistic Commit Messages
+The script generates highly realistic commit messages that match actual GitHub patterns:
 
-1. **Documentation**: `docs: initial project setup and documentation`
-2. **Features**: `feat: add Snowflake environment setup scripts`
-3. **Data**: `data: add customer dataset for testing`
-4. **Performance**: `perf: optimize query performance with clustering keys`
-5. **Refactoring**: `refactor: improve data model for better query performance`
-6. **Testing**: `test: add unit tests for data transformation logic`
-7. **Bug Fixes**: `fix: resolve timezone handling in data ingestion`
-8. **Chores**: `chore: update Snowflake connector dependencies`
+**Format**: `Action description [by Contributor] • YYYY-MM-DDTHH:MM:SS`
+
+**Examples**:
+- `Configure local deployment [by Hasnain-SCT] • 2023-07-15T14:30:22`
+- `Clean up database implementation [by SoftComputech-SCT] • 2023-07-10T09:15:45`
+- `Fix API error [by Irfan-SCT] • 2023-07-08T16:20:33`
+- `Fix failing tests in aws [by Ahmed-SCT] • 2023-07-05T11:45:12`
+- `Create ready real-time streaming etl pipeline for processing [by SiddiqueDataEng] • 2023-07-03T13:25:18`
+
+**Contributor Specialization**:
+- **Hasnain-SCT**: Deployment and configuration
+- **SoftComputech-SCT**: Database and cleanup tasks
+- **Irfan-SCT**: API and error handling
+- **Ahmed-SCT**: Testing and quality assurance
+- **Zara-SCT**: Documentation and README
+- **Usman-SCT**: Performance optimization
+- **Fatima-SCT**: Security and authentication
+- **SiddiqueDataEng**: Data engineering and pipelines
 
 ## 🔍 Testing
 
