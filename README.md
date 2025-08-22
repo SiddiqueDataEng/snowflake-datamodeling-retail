@@ -12,9 +12,9 @@ This repo scaffolds a small, realistic Snowflake project:
 
 ## Prerequisites
 
-- Snowflake account + user with a role that can create warehouse, database, schema
-- Python 3.9+
-- (Optional) Java 11+ and Maven if you want the ingest SDK
+- Snowflake account with a user and role that can create a warehouse, database, and schema
+- Python 3.6+ (released in 2016, commonly used before Python 3.9)
+- (Optional) Java 8+ and Maven, if you want to use the Ingest SDK
 
 ## Setup (Windows PowerShell)
 
